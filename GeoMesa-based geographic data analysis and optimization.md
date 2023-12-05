@@ -1,4 +1,4 @@
-### GeoMesa
+![image-20220623151524571](https://github.com/Aleduohm/GeoMesa/assets/84367663/bbfb7365-204f-4198-b102-069d37b96a92)### GeoMesa
 
 #### 1.导入数据到geomesa-hbase
 
@@ -444,7 +444,7 @@ ingest相关参数
 bin/geomesa-hbase stats-top-k -c qimo -f taxi02 --no-cache -k 2
 ```
 <div align=center>
-![image-20220623151524571](https://github.com/Aleduohm/GeoMesa/assets/84367663/e17c70c3-2542-4382-9e68-86179fb0c6f9)
+<img src="https://github.com/Aleduohm/GeoMesa/assets/84367663/e17c70c3-2542-4382-9e68-86179fb0c6f9" />
 </div>
 
 ##### 4.3时间列的处理与序号1中相同，此处直接使用已经导入geomesa-hbase中的数据
