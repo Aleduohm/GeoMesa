@@ -477,7 +477,6 @@ bin/geomesa-hbase stats-top-k -c qimo -f taxi02 --no-cache -k 2
   	--catalog qimo > taxi36950.html
   ```
 
-  ![image-20220623145146378](https://github.com/Aleduohm/GeoMesa/assets/84367663/d0d08cc8-505e-444a-86dd-7bb408208683)
   <div align=center>
     <img src="https://github.com/Aleduohm/GeoMesa/assets/84367663/d0d08cc8-505e-444a-86dd-7bb408208683" style="zoom: 33%;" width="720"/>
   </div>
@@ -492,8 +491,9 @@ bin/geomesa-hbase stats-top-k -c qimo -f taxi02 --no-cache -k 2
       --catalog qimo > taximax.html
   ```
 
-  ![image-20220623145228728](https://github.com/Aleduohm/GeoMesa/assets/84367663/abb72698-a368-43f1-8341-191117ac621f)
-
+  <div align=center>
+    <img src="https://github.com/Aleduohm/GeoMesa/assets/84367663/abb72698-a368-43f1-8341-191117ac621f" style="zoom: 33%;" width="720"/>
+  </div>
 #### 5.KNN查询
 
 使用geospark.jar作为依赖项进入sparkshell
@@ -541,4 +541,6 @@ val resultSize = KNNQuery.SpatialKnnQueryUsingIndex(objectRDD, queryPoint, 6);
 
 ![image-20220623212536334](https://github.com/Aleduohm/GeoMesa/assets/84367663/dda26eb8-d81e-419c-878c-790c842ef9b7)
 
-![image](https://github.com/Aleduohm/GeoMesa/assets/84367663/e5cf776f-6303-4fbb-980c-98e1fb1e8382)
+  <div align=center>
+    <img src="https://github.com/Aleduohm/GeoMesa/assets/84367663/e5cf776f-6303-4fbb-980c-98e1fb1e8382" style="zoom: 33%;" width="720"/>
+  </div>
