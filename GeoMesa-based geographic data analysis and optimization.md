@@ -1,4 +1,4 @@
-![image-20220623151524571](https://github.com/Aleduohm/GeoMesa/assets/84367663/bbfb7365-204f-4198-b102-069d37b96a92)### GeoMesa
+### GeoMesa
 
 #### 1.导入数据到geomesa-hbase
 
