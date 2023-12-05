@@ -462,7 +462,6 @@ bin/geomesa-hbase stats-top-k -c qimo -f taxi02 --no-cache -k 2
 
   命令执行完后会生成名为taxi.html的html文件，在网页打开此html文件即可看到22223出租车的轨迹点
 
-  ![image-20220623144840601](https://github.com/Aleduohm/GeoMesa/assets/84367663/ad5f9298-71b7-4450-8bff-354522b12729)
   <div align=center>
     <img src="https://github.com/Aleduohm/GeoMesa/assets/84367663/ad5f9298-71b7-4450-8bff-354522b12729" alt="image-20220623144840601" style="zoom: 33%;" width="720"/>
   </div>
@@ -479,7 +478,9 @@ bin/geomesa-hbase stats-top-k -c qimo -f taxi02 --no-cache -k 2
   ```
 
   ![image-20220623145146378](https://github.com/Aleduohm/GeoMesa/assets/84367663/d0d08cc8-505e-444a-86dd-7bb408208683)
-
+  <div align=center>
+    <img src="https://github.com/Aleduohm/GeoMesa/assets/84367663/d0d08cc8-505e-444a-86dd-7bb408208683" style="zoom: 33%;" width="720"/>
+  </div>
 - 轨迹点对多的出租车28249轨迹
 
   ```
