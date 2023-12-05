@@ -72,7 +72,7 @@
   val dfraw = spark.read.csv("/data/ZQ/geomesa/data/geotest/phone.csv")
   ```
 <div align=center>
-  ![image-20220623140737824](https://github.com/Aleduohm/GeoMesa/assets/84367663/31e04966-f86a-4e70-8861-d16041f5df50)
+  <img src="https://github.com/Aleduohm/GeoMesa/assets/84367663/31e04966-f86a-4e70-8861-d16041f5df50"/>
 </div>
 
 - 定义时间处理函数
