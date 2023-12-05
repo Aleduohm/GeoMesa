@@ -1,4 +1,4 @@
-![image-20220623170018346](https://github.com/Aleduohm/GeoMesa/assets/84367663/73ff5288-0ecd-479b-b846-338f6ebe6f60)### GeoMesa
+### GeoMesa
 
 #### 1.导入数据到geomesa-hbase
 
@@ -464,7 +464,7 @@ bin/geomesa-hbase stats-top-k -c qimo -f taxi02 --no-cache -k 2
 
   ![image-20220623144840601](https://github.com/Aleduohm/GeoMesa/assets/84367663/ad5f9298-71b7-4450-8bff-354522b12729)
 
-  <img src="md_img/geomesa%E6%9C%9F%E6%9C%AB%E5%A4%A7%E4%BD%9C%E4%B8%9A2.img/image-20220623144840601.png" alt="image-20220623144840601" style="zoom: 45%;" />
+  <img src="[md_img/geomesa%E6%9C%9F%E6%9C%AB%E5%A4%A7%E4%BD%9C%E4%B8%9A2.img/image-20220623144840601.png](https://github.com/Aleduohm/GeoMesa/assets/84367663/ad5f9298-71b7-4450-8bff-354522b12729)" alt="image-20220623144840601" style="zoom: 45%;" />
 
 - id为36950的出租车轨迹
 
@@ -479,8 +479,6 @@ bin/geomesa-hbase stats-top-k -c qimo -f taxi02 --no-cache -k 2
 
   ![image-20220623145146378](https://github.com/Aleduohm/GeoMesa/assets/84367663/d0d08cc8-505e-444a-86dd-7bb408208683)
 
-  <img src="md_img/geomesa%E6%9C%9F%E6%9C%AB%E5%A4%A7%E4%BD%9C%E4%B8%9A2.img/image-20220623145146378.png" alt="image-20220623145146378" style="zoom: 80%;" />
-
 - 轨迹点对多的出租车28249轨迹
 
   ```
@@ -493,8 +491,6 @@ bin/geomesa-hbase stats-top-k -c qimo -f taxi02 --no-cache -k 2
   ```
 
   ![image-20220623145228728](https://github.com/Aleduohm/GeoMesa/assets/84367663/abb72698-a368-43f1-8341-191117ac621f)
-
-  <img src="md_img/geomesa%E6%9C%9F%E6%9C%AB%E5%A4%A7%E4%BD%9C%E4%B8%9A2.img/image-20220623145228728.png" alt="image-20220623145228728" style="zoom:50%;" />
 
 #### 5.KNN查询
 
@@ -544,5 +540,3 @@ val resultSize = KNNQuery.SpatialKnnQueryUsingIndex(objectRDD, queryPoint, 6);
 ![image-20220623212536334](https://github.com/Aleduohm/GeoMesa/assets/84367663/dda26eb8-d81e-419c-878c-790c842ef9b7)
 
 ![image](https://github.com/Aleduohm/GeoMesa/assets/84367663/e5cf776f-6303-4fbb-980c-98e1fb1e8382)
-
-![image-20220623212536334](md_img/geomesa%E6%9C%9F%E6%9C%AB%E5%A4%A7%E4%BD%9C%E4%B8%9A2.img/image-20220623212536334.png)
