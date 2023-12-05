@@ -464,7 +464,7 @@ bin/geomesa-hbase stats-top-k -c qimo -f taxi02 --no-cache -k 2
 
   ![image-20220623144840601](https://github.com/Aleduohm/GeoMesa/assets/84367663/ad5f9298-71b7-4450-8bff-354522b12729)
 
-  <img src="https://github.com/Aleduohm/GeoMesa/assets/84367663/ad5f9298-71b7-4450-8bff-354522b12729" alt="image-20220623144840601" style="zoom: 33%;" width="180" height="105" />
+  <img src="https://github.com/Aleduohm/GeoMesa/assets/84367663/ad5f9298-71b7-4450-8bff-354522b12729" alt="image-20220623144840601" style="zoom: 33%;" width="360" height="210" />
 
 - id为36950的出租车轨迹
 
