@@ -71,9 +71,9 @@
   ```
   val dfraw = spark.read.csv("/data/ZQ/geomesa/data/geotest/phone.csv")
   ```
-
+<div align=center>
   ![image-20220623140737824](https://github.com/Aleduohm/GeoMesa/assets/84367663/31e04966-f86a-4e70-8861-d16041f5df50)
-
+</div>
 
 - 定义时间处理函数
 
@@ -96,9 +96,9 @@
   
   val df01 = df.drop("_c1")
   ```
-
+<div align=center>
   ![image-20220623140817879](https://github.com/Aleduohm/GeoMesa/assets/84367663/ccc8517f-030e-41bf-973b-a94966a0870a)
-
+</div>
 
   ```
   val df02= df01.rdd.map(x => x(0) + "," + x(1) + "," + x(2) + "," + x(3))
@@ -116,14 +116,14 @@ geomesa-hbase ingest --catalog qimo \
 	-s conf/phonedata.sft \
 	"data/phone.csv"
 ```
-
+<div align=center>
 ![image-20220606202802822](https://github.com/Aleduohm/GeoMesa/assets/84367663/5a13ab60-a8ad-49b6-88e6-ecde91a6599d)
-
+</div>
 
 在hbase中查看
-
+<div align=center>
 ![image-20220623141024734](https://github.com/Aleduohm/GeoMesa/assets/84367663/ca860224-8c22-4c8e-aa29-26a3382848c6)
-
+</div>
 
 #### 2.geomesa-hbase与hive、spark查询性能对比
 
@@ -139,21 +139,21 @@ geomesa-hbase ingest --catalog qimo \
   114.011875 22.6715972
   bin/geomesa-hbase export -c qimo -f phone01 -q "time = '2022-06-06T22:58:48' && geom = 'POINT (114.011875 22.6715972)'"
   ```
-
+<div align=center>
   ![image-20220618215823991](https://github.com/Aleduohm/GeoMesa/assets/84367663/0b182b20-8c5d-4c35-a136-bdd9e38201fe)
-
-
+</div>
+<div align=center>
   ![image-20220625190127929](https://github.com/Aleduohm/GeoMesa/assets/84367663/90605c56-914a-4d02-845e-bbde41836856)
-
+</div>
 
 - 时间查询
 
   ```
   bin/geomesa-hbase export -c qimo -f phone01 -q "time = '2022-06-06T22:58:48'"
   ```
-
+<div align=center>
   ![image-20220625163335507](https://github.com/Aleduohm/GeoMesa/assets/84367663/cc0d29f9-c819-4df2-9226-106f7b76d36c)
-
+</div>
 
 - 空间查询
 
@@ -164,9 +164,9 @@ geomesa-hbase ingest --catalog qimo \
   ```
   bin/geomesa-hbase export -c qimo -f phone01 -q "geom = 'POINT (114.011875 22.6715972)'"
   ```
-
+<div align=center>
   ![image-20220618220510290-16559649503891](https://github.com/Aleduohm/GeoMesa/assets/84367663/19521390-5a34-48dc-a5eb-ceb9b473af74)
-
+</div>
 
 ##### 2.2hive查询
 
@@ -177,44 +177,44 @@ create table phone01(id int,time string,lng double,lat double,datetime string) r
 
 load data inpath '/data/ZQ/geomesa/data/phone.csv/phone.csv' into table qimo.phone01;
 ```
-
+<div align=center>
 ![image-20220618215221132](https://github.com/Aleduohm/GeoMesa/assets/84367663/b0403fb6-5a23-453e-8512-e1d00a4d3810)
-
+</div>
 
 - 时空查询
 
   ```
   select * from phone01 where time = '2022-06-06T22:58:48' and lng = 113.895246 and lat = 22.775922;
   ```
-
+<div align=center>
   ![image-20220618215741467](https://github.com/Aleduohm/GeoMesa/assets/84367663/7c123442-8198-471d-8998-ec46464cea74)
-
+</div>
 - 时间查询
 
   ```
   select * from phone01 where datetime = '2022-06-06T22:58:48';
   ```
-
+<div align=center>
   ![image-20220618220329110](https://github.com/Aleduohm/GeoMesa/assets/84367663/3c066d97-2f33-4ea5-9189-a26bf8f9a7bc)
-
+</div>
 
 - 空间查询
 
   ```
   select * from phone01 where lng = 113.895246 and lat = 22.775922;
   ```
-
+<div align=center>
   ![image-20220618220622856](https://github.com/Aleduohm/GeoMesa/assets/84367663/44764c6c-07be-46c9-b11e-7735db849e2c)
-
+</div>
 
 - 一般属性
 
   ```
   select * from phone01 where id = 0055827859;
   ```
-
+<div align=center>
   ![image-20220618221008093](https://github.com/Aleduohm/GeoMesa/assets/84367663/7d061551-1349-41d9-ba23-ee421d42e52c)
-
+</div>
 
 ##### 2.3spark查询
 
@@ -223,35 +223,35 @@ load data inpath '/data/ZQ/geomesa/data/phone.csv/phone.csv' into table qimo.pho
 ```
 val dfraw = spark.read.csv("/data/ZQ/geomesa/data/phone.csv/phone.csv")
 ```
-
+<div align=center>
 ![image-20220619170549007](https://github.com/Aleduohm/GeoMesa/assets/84367663/a3200a04-5d49-4c5d-8f9e-c5abff242da1)
-
+</div>
 
 - 时空查询
 
   ```
   dfraw.filter(expr("_c3 like '2022-06-06T22:58:48'") && expr("_c1 like '113.895246'") && expr("_c2 like '22.775922'")).show()
   ```
-
+<div align=center>
   ![image-20220619172044939](https://github.com/Aleduohm/GeoMesa/assets/84367663/ad11bb1d-beda-4cf7-a88d-c586466cf7e4)
-
+</div>
 
 - 时间查询
 
   ```
   dfraw.filter(expr("_c3 like '2022-06-06T22:58:48'")).show()
   ```
-
+<div align=center>
   ![image-20220619172330371](https://github.com/Aleduohm/GeoMesa/assets/84367663/6eddd55e-11c8-479b-a881-b1e56f822058)
-
+</div>
 - 空间查询
 
   ```
   dfraw.filter(expr("_c1 like '113.895246'") && expr("_c2 like '22.775922'")).show()
   ```
-
+<div align=center>
   ![image-20220619172436124](https://github.com/Aleduohm/GeoMesa/assets/84367663/fa708579-0367-4122-a867-61d0dcb64ec4)
-
+</div>
 
 #### 3.geomesa-hbase导入优化
 
@@ -288,9 +288,9 @@ ingest相关参数
   	-t 3 \
   	"data/split/phone_3/*"
   ```
-
+<div align=center>
   ![image-20220623162621637](https://github.com/Aleduohm/GeoMesa/assets/84367663/f447cf06-5db1-4a25-9d5c-b2bf0a025e0b)
-
+</div>
 
 - 7线程
 
@@ -303,9 +303,9 @@ ingest相关参数
   	-t 7 \
   	"data/split/phone_7/*"
   ```
-
+<div align=center>
   ![image-20220623163850680](https://github.com/Aleduohm/GeoMesa/assets/84367663/54f59a5b-f3ee-4d68-9b1c-5a022f862f1b)
-
+</div>
 
 - 5线程
 
@@ -318,9 +318,9 @@ ingest相关参数
   	-t 5 \
   	"data/split/phone_5/*"
   ```
-
+<div align=center>
   ![image-20220623170018346](https://github.com/Aleduohm/GeoMesa/assets/84367663/d094566b-61e0-4339-bd3b-7b8045336c92)
-
+</div>
 
 - 4线程
 
@@ -333,9 +333,9 @@ ingest相关参数
   	-t 4 \
   	"data/split/phone_4/*"
   ```
-
+<div align=center>
   ![image-20220623214529762](https://github.com/Aleduohm/GeoMesa/assets/84367663/4c7273fe-d842-4b4d-84c9-1603f361e561)
-
+</div>
 
 - 2线程
 
@@ -348,9 +348,9 @@ ingest相关参数
   	-t 2 \
   	"data/split/phone_2/*"
   ```
-
+<div align=center>
   ![image-20220623172331133](https://github.com/Aleduohm/GeoMesa/assets/84367663/45d02a3e-34f5-4f34-905d-e254a6d58b35)
-
+</div>
 
 （当然受cpu及磁盘速度及物理内存的限制。活动线程太多的话，频繁的上下文切换很耗CPU。）
 
@@ -443,9 +443,9 @@ ingest相关参数
 ```
 bin/geomesa-hbase stats-top-k -c qimo -f taxi02 --no-cache -k 2
 ```
-
+<div align=center>
 ![image-20220623151524571](https://github.com/Aleduohm/GeoMesa/assets/84367663/e17c70c3-2542-4382-9e68-86179fb0c6f9)
-
+</div>
 
 ##### 4.3时间列的处理与序号1中相同，此处直接使用已经导入geomesa-hbase中的数据
 
